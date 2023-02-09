@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sea{
+    position: relative;
+    background: url(../img/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.fish1, .fish2, .fish3, .fish4, .fish5, .fish6{
+    position: absolute;
+}
+.fish1{
+    top: 50%;
+    left: -10px;
+    background: url(../img/3.png);
+    width: 418px;
+    height: 397px;
+    transform: scale(0.3) rotateY(180deg);
+    animation: move 0.5s steps(4) infinite, swim-left 10s  linear;
+    animation-fill-mode: forwards;
+}
+.fish2{
+    background: url(../img/1.png);
+    top: -100px;
+    right: -400px;
+    width: 498.5px;
+    height: 327px;
+    transform: rotateY(0) scale(0.3);
+    animation: moveTwo-2 0.5s steps(4) infinite reverse, swim-right-2 10s  linear ;
+    animation-delay: 11s; 
+    animation-fill-mode: forwards;
+}
+.fish3{
+    background: url(../img/2.png);
+    width: 498.5px;
+    height: 327px;
+    top: 100%;
+    left: -10px;
+    transform: scale(0.3) rotateY(180deg);
+    animation: moveTwo-3 0.5s steps(4) infinite reverse, swim-left-3 10s  linear ;
+    animation-delay: 22s; 
+    animation-fill-mode: forwards;
+}
+.fish4{
+    background: url(../img/7.gif);
+    width: 360px;
+    height: 360px;
+    top: 100%;
+    right: -400px;
+    transform: scale(0.5);
+    animation:  swim-right-4 10s  linear ;
+    animation-delay: 15s; 
+    animation-fill-mode: forwards;
+    animation-delay: 33s; 
+}
+.fish5{
+    background: url(../img/8.gif) no-repeat;
+    width: 180px;
+    height: 122px;
+    top: 100%;
+    left: -10px;
+    animation: swim-left-5 10s  linear ;
+    animation-delay: 44s; 
+    animation-fill-mode: forwards;
+}
+.fish6{
+    background: url(../img/4.gif);
+    width: 600px;
+    height: 337px;
+    top: 100%;
+    right: -10px;
+    transform: scale(0.4);
+    animation:  swim-right-6 10s  linear;
+    animation-fill-mode: forwards;
+    animation-delay: 55s; 
+}
+
+.fish1:hover, .fish2:hover, .fish3:hover,
+.fish4:hover, .fish5:hover, .fish6:hover{
+    animation-play-state: paused;
+}
+.text{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    margin: 0 auto;
+    width: 50%;
+    height: 100px;
+    border: 4px solid #ffffff80;
+    text-align: center;
+    line-height: 100px;
+    background-color: #ffffff46;
+    border-radius: 30px 30px 70px 70px;
+    animation:  showText 6s  linear;
+    animation-fill-mode: forwards;
+    /* animation-delay: 66s; */
+}
+.text:hover{
+    animation-play-state: paused;
+    background-color: aliceblue;
+}
+.text p{
+    font-size: 40px;
+    color: #2682a7;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.text:hover p{
+    font-weight: normal;
+    color: #033e55;
+    letter-spacing: 3px;
+}
+@keyframes move{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: -1672px;
+    }
+}
+@keyframes swim-left {
+    0%{
+      left: 0; top: 50%;
+    }
+    100%{
+       left: 1000px; top: -100px;
+    }
+    
+}
+@keyframes moveTwo-2{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: -1992px;
+        opacity: 1;
+    }
+}
+@keyframes swim-right-2{
+    0%{
+        right: 0; top: 50%;
+
+      }
+      100%{
+        right: 1000px; top: -50px;
+      }
+}
+@keyframes moveTwo-3{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: -1992px;
+        opacity: 1;
+    }
+}
+@keyframes swim-left-3{
+    0%{
+        left: 0; top: 50%;
+      }
+      100%{
+         left: 1000px; top: 100px;
+      }
+}
+@keyframes swim-right-4{
+    0%{
+        right: 0; top: 50%;
+      }
+      100%{
+        right: 1000px; top: 100px;
+      }
+}
+@keyframes swim-left-5 {
+    0%{
+        left: 0; top: 0;
+      }
+      100%{
+         left: 1100px; top: 400px;
+      }
+}
+@keyframes swim-right-6{
+    0%{
+        right: 0; top: 0;
+      }
+      100%{
+        right: 900px; top: 300px;
+      }
+}
+
+@keyframes showText{
+    from{
+       transform: translate(-50%, -50%) scale(0);
+    }
+    to{
+       transform: translate(-50%, -50%) scale(1);
+    }
+}
