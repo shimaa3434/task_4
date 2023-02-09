@@ -101,7 +101,7 @@
     border-radius: 30px 30px 70px 70px;
     animation:  showText 6s  linear;
     animation-fill-mode: forwards;
-    /* animation-delay: 66s; */
+    animation-delay: 66s;
 }
 .text:hover{
     animation-play-state: paused;
